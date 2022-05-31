@@ -1,0 +1,13 @@
+/*aqui informamos ao sequilize onde ficará o banco de dados, 
+o arquivo de conexão, a pasta de migrations...*/
+const { resolve } = require('path'); 
+
+module.exports = {
+   //entre vírgulas, todos os caminhos até o arquivo.
+  config: resolve(__dirname, 'src', 'config', 'database.js'), 
+  'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+  'seeders-path': resolve(__dirname, 'src', 'database', 'seeds'),
+};
+
+/*o  sequelize só entente a forma antiga de escrever.
+por isso usamos const ... require... em vez de import*/
